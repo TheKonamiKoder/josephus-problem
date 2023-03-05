@@ -15,4 +15,7 @@ end
 x = 1:1000
 y = josephus_0.(x)
 
-plot(x, y)
+plot(x, y, label=["josephus_0(n)"])
+title!("Josephus 0")
+xlabel!("n")
+ylabel!("Survivor")
