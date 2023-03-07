@@ -2,3 +2,6 @@ name = "josephus-problem"
 uuid = "ef39c34b-20d0-4f61-bb7e-19b6d68150cb"
 authors = ["Pratyush Joshi"]
 version = "0.1.1"
+
+[deps]
+Plots = "91a5bcdd-55d7-5caf-9e0b-520d859cae80"
