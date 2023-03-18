@@ -1,12 +1,7 @@
 
 function josephus_2(n::Integer, k::Integer, l::Integer)::Integer
-    mutable struct Person
-        position::Integer
-        lives::Integer
-    end
-
     next = 0
-    circle = [Person(position, l) for position in 1:n]
+    circle = [(position=position, lives=l) for position in 1:n]
 
     while length(circle) > 0
         next = (next + k - 1) % length(circle)
