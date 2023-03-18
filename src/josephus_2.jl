@@ -3,7 +3,7 @@ function josephus_2(n::Integer, k::Integer, l::Integer)::Integer
     next = 0
     circle = [(position=position, lives=l) for position in 1:n]
 
-    while length(circle) > 0
+    while length(circle) > 1
         next = (next + k - 1) % length(circle)
         circle[next + 1] = (position=circle[next + 1].position, lives=circle[next + 1].lives - 1)
         if circle[next + 1].lives == 0
