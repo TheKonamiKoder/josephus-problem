@@ -40,9 +40,11 @@ module JosephusFunctions
 
     function josephus_3(n::Integer, f::Function)::Integer
         next = 0
+        k = 2
         circle = [1:n...]
         while length(circle) > 1
-            next = f(next) % length(circle)
+            k = f(k)
+            next = (next + k - 1) % length(circle)
             deleteat!(circle, next + 1)
         end
 
